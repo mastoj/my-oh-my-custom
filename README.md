@@ -1,2 +1,3 @@
 # my-oh-my-custom
-my customization of oh-my-zsh
+
+To configure set the variable `ZSH_CUSTOM` in `.zshrc`.
