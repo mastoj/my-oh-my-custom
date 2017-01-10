@@ -95,3 +95,5 @@ fi
 if [ -f /Users/tomasjansson/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/tomasjansson/google-cloud-sdk/completion.zsh.inc'
 fi
+
+source <(kubectl completion zsh)

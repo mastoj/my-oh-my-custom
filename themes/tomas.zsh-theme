@@ -9,4 +9,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-RPROMPT='%{$fg_no_bold[green]%}gcloud:%{$fg_no_bold[yellow]%} $(current-env) %{$reset_color%} %{$fg_no_bold[green]%}kube: %{$fg_no_bold[yellow]%} $(current-cluster) %{$reset_color%} ${_time}'
+RPROMPT='%{$fg_no_bold[green]%}gcloud:%{$fg_no_bold[yellow]%} $(uc-current-env) %{$reset_color%} %{$fg_no_bold[green]%}kube: %{$fg_no_bold[yellow]%} $(uc-current-cluster) %{$reset_color%} ${_time}'
