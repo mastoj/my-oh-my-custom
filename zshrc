@@ -96,4 +96,6 @@ if [ -f /Users/tomasjansson/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/tomasjansson/google-cloud-sdk/completion.zsh.inc'
 fi
 
-source <(kubectl completion zsh)
+export MONO_TLS_PROVIDER=btls
+
+source <(kubectl completion zsh)eval $(/usr/libexec/path_helper -s)

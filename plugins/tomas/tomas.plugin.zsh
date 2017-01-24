@@ -9,3 +9,7 @@ alias val-containers-rm='docker rm $(docker ps -a -q)'
 alias val-containers-stop='docker stop $(docker ps -a -q)'
 
 alias val-images-rm='docker rmi $(docker images -q)'
+
+#color(){
+#    set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2 3>&1
+#}
