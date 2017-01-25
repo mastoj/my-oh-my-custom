@@ -98,4 +98,4 @@ fi
 
 export MONO_TLS_PROVIDER=btls
 
-source <(kubectl completion zsh)eval $(/usr/libexec/path_helper -s)
+source <(kubectl completion zsh)
