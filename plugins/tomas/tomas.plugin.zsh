@@ -13,6 +13,9 @@ alias val-images-rm='docker rmi $(docker images -q)'
 alias cam-find='lsof | grep -i "VDC"'
 alias cam-kill='cam-find | awk -v N=2 '\''{print $N}'\'' | xargs kill'
 
+goto() {
+    cd golang/src/github.com/unacast/$@
+}
 #color(){
 #    set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2 3>&1
 #}
