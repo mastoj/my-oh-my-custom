@@ -54,6 +54,7 @@ ZSH_CUSTOM=$HOME/git/mastoj/my-oh-my-custom
 plugins=(git brew docker tomas npm)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.env.sh 
 
 # User configuration
 
