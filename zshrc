@@ -53,6 +53,8 @@ ZSH_CUSTOM=$HOME/git/mastoj/my-oh-my-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git brew docker tomas npm)
 
+
+source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 source ~/.env.sh 
 
