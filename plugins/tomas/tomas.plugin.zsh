@@ -1,6 +1,6 @@
-bindkey -e
-bindkey "[D" backward-word
-bindkey "[C" forward-word
+#bindkey -e
+#bindkey "[D" backward-word
+#bindkey "[C" forward-word
 
 alias tomas='echo "tomas"'
 
@@ -15,6 +15,7 @@ alias cam-kill='sudo killall VDCAssistant'
 alias spotlight-fix='sudo mdutil -a -i off & sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist & sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist & sudo mdutil -a -i on'
 
 alias paket='mono .paket/paket.exe'
+alias git='LANG=en_US.UTF-8 git'
 
 goto() {
     cd ~/golang/src/github.com/unacast/$@
