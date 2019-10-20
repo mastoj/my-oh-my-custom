@@ -103,3 +103,15 @@ export MONO_TLS_PROVIDER=btls
 
 source <(kubectl completion zsh)
 eval $(/usr/libexec/path_helper -s)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+source /Users/tomasjansson/.iterm2_shell_integration.zsh
+
+iterm2_print_user_vars() {
+  iterm2_set_user_var gcp_env $(uc-current-env)
+  iterm2_set_user_var kube_cluster $(uc-current-cluster)
+}
