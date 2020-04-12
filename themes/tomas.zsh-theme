@@ -2,7 +2,9 @@
 local _time="⌚ %{$fg_bold[red]%}%*%{$reset_color%}"
 
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT='%{$fg_no_bold[green]%}gcloud:%{$fg_no_bold[yellow]%} $(uc-current-env) %{$reset_color%} %{$fg_no_bold[green]%}kube: %{$fg_no_bold[yellow]%} $(uc-current-cluster) %{$reset_color%} ${_time}
+#PROMPT='%{$reset_color%} ${_time}'
+#PROMPT='%{$fg_no_bold[green]%}gcloud:%{$fg_no_bold[yellow]%} $(uc-current-env) %{$reset_color%} %{$fg_no_bold[green]%}kube: %{$fg_no_bold[yellow]%} $(uc-current-cluster) %{$reset_color%} ${_time} ${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT='${_time}
 ${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
