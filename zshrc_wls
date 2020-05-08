@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="code-insiders ~/.zshrc"
 alias ohmyzsh="code-insiders ~/.oh-my-zsh"
+alias cdwin="/mnt/c/Users/TomasJansson"
 
 # Key bindings
 bindkey '^[[1;5D' backward-word
@@ -109,5 +110,8 @@ bindkey '^H' backward-kill-word
 
 # Set color of ls
 eval `dircolors ~/git/mastoj/dircolors-solarized/dircolors.256dark`
+
+# Add relevant paths
+export PATH=$HOME/git/mastoj/az-assistant/src:$PATH
 
 cd ~
