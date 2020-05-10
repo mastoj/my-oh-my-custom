@@ -15,6 +15,7 @@ alias cam-kill='sudo killall VDCAssistant'
 alias spotlight-fix='sudo mdutil -a -i off & sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist & sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist & sudo mdutil -a -i on'
 
 alias git='LANG=en_US.UTF-8 git'
+alias k='kubectl'
 
 goto() {
     cd ~/golang/src/github.com/unacast/$@
