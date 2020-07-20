@@ -111,7 +111,25 @@ bindkey '^H' backward-kill-word
 # Set color of ls
 eval `dircolors ~/git/mastoj/dircolors-solarized/dircolors.256dark`
 
+# Download az completion
+mkdir -p $HOME/.mastoj
+if [ ! -f $HOME/.mastoj/az.completion ]; then
+  wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O .mastoj/az.completion
+fi
+
+# Source az completion
+if [ -f $HOME/.mastoj/az.completion ]; then
+  source "$HOME/.mastoj/az.completion"
+fi
+
 # Add relevant paths
-export PATH=$HOME/git/mastoj/az-assistant/src:$PATH
+export PATH=$HOME/git/mastoj/az-assistant/src:$HOME/.linkerd2/bin:$PATH
 
 cd ~
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
