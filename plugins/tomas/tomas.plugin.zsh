@@ -17,9 +17,6 @@ alias spotlight-fix='sudo mdutil -a -i off & sudo launchctl unload -w /System/Li
 alias git='LANG=en_US.UTF-8 git'
 alias k='kubectl'
 
-goto() {
-    cd ~/golang/src/github.com/unacast/$@
-}
 #color(){
 #    set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2 3>&1
 #}

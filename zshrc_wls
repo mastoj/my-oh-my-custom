@@ -125,11 +125,13 @@ fi
 # Add relevant paths
 export PATH=$HOME/git/mastoj/az-assistant/src:$HOME/.linkerd2/bin:$PATH
 
-cd ~
+#cd ~
 
-# add Pulumi to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
+# add Pulumi and tonet tools to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin:$HOME/.dotnet/tools
+
 
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+alias loadnvm="[ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\"" # This loads nvm
