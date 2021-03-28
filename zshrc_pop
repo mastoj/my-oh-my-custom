@@ -150,6 +150,8 @@ export PATH=$PATH:$HOME/.pulumi/bin:$HOME/.dotnet/tools:/snap/dotnet-sdk/101/sdk
 # Add linkerd to path
 export PATH=$PATH:$HOME/.linkerd2/bin
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 
 # NVM
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -157,5 +159,5 @@ export PATH=$PATH:$HOME/.linkerd2/bin
 # alias loadnvm="[ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\"" # This loads nvm
 
 #export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 # https://github.com/dotnet/core/issues/2186
-export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.100/Sdks
+export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
 #DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
