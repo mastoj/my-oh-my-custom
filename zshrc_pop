@@ -140,7 +140,7 @@ fi
 autoload -U compinit && compinit
 
 # Add relevant paths
-export PATH=$HOME/git/mastoj/az-assistant/src:$HOME/.linkerd2/bin:$PATH
+export PATH=$HOME/git/mastoj/az-assistant/src:$HOME/.linkerd2/bin:$HOME/bin:$PATH
 
 #cd ~
 
@@ -151,7 +151,7 @@ export PATH=$PATH:$HOME/.pulumi/bin:$HOME/.dotnet/tools:/snap/dotnet-sdk/101/sdk
 export PATH=$PATH:$HOME/.linkerd2/bin
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
+export PATH="/home/tomas/.local/bin:$PATH"
 
 # NVM
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -159,5 +159,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # alias loadnvm="[ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\"" # This loads nvm
 
 #export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 # https://github.com/dotnet/core/issues/2186
-export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
+#export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
 #DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
