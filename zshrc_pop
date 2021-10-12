@@ -153,14 +153,16 @@ export PATH=$PATH:$HOME/.linkerd2/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/home/tomas/.local/bin:$PATH"
 
-# NVM
-# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-
-# alias loadnvm="[ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\"" # This loads nvm
+# Add global npm path
+ export PATH="/home/tomas/.npm-global/bin:$PATH"
 
 #export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 # https://github.com/dotnet/core/issues/2186
-#export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
-#DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
