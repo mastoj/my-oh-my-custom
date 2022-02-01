@@ -152,6 +152,7 @@ export PATH=$PATH:$HOME/.linkerd2/bin
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/home/tomas/.local/bin:$PATH"
+export PATH="/home/tomas/.dotnet:$PATH"
 
 # Add global npm path
  export PATH="/home/tomas/.npm-global/bin:$PATH"
