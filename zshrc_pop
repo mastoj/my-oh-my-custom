@@ -158,7 +158,7 @@ export PATH="/home/tomas/.dotnet:$PATH"
  export PATH="/home/tomas/.npm-global/bin:$PATH"
 
 #export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 # https://github.com/dotnet/core/issues/2186
-export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
+# export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
