@@ -16,8 +16,8 @@ alias spotlight-fix='sudo mdutil -a -i off & sudo launchctl unload -w /System/Li
 
 alias git='LANG=en_US.UTF-8 git'
 alias k='kubectl'
-alias knx='k ctx'
-alias kns='k ns'
+alias knx='kubectx'
+alias kns='kubens'
 #color(){
 #    set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2 3>&1
 #}
