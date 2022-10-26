@@ -11,6 +11,8 @@
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code-insiders --wait $MERGED
+[mergetool]
+   keepBackup = false
 [user]
 	useConfigOnly = true
 	name = Tomas Jansson
