@@ -155,10 +155,17 @@ export PATH="/home/tomas/.local/bin:$PATH"
 export PATH="/home/tomas/.dotnet:$PATH"
 
 # Add global npm path
- export PATH="/home/tomas/.npm-global/bin:$PATH"
+export PATH="/home/tomas/.npm-global/bin:$PATH"
+
+# Change global npm package folder
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 #export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 # https://github.com/dotnet/core/issues/2186
-# export MSBuildSDKsPath=/usr/share/dotnet/sdk/5.0.103/Sdks
+#export MSBuildSDKsPath=/home/tomas/.dotnet/sdk/6.0.101/Sdks
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

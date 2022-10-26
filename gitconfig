@@ -1,0 +1,23 @@
+[core]
+	autocrlf = false
+	editor = code-insiders --wait --new-window
+[init]
+	defaultBranch = main
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code-insiders --wait $MERGED
+[user]
+	useConfigOnly = true
+	name = Tomas Jansson
+	email = tomas.jansson@gmail.com
+
+[includeIf "gitdir:~/git/elkjop/"]
+	path = .gitconfig-work
+
+[includeIf "gitdir:~/git/elkjopnordic/"]
+        path = .gitconfig-work
