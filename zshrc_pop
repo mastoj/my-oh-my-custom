@@ -181,3 +181,10 @@ fi
 
 export DNSIMPLE_TOKEN=GV1t6MChtfneVaCBGjMp4pPS9N7Xb4lS
 export DNSIMPLE_ACCOUNT=47929
+# pnpm
+export PNPM_HOME="/home/tomas/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
