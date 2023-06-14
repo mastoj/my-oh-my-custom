@@ -179,8 +179,12 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-export DNSIMPLE_TOKEN=GV1t6MChtfneVaCBGjMp4pPS9N7Xb4lS
 export DNSIMPLE_ACCOUNT=47929
+
+# Copilot
+eval "$(github-copilot-cli alias -- "$0")"
+# Copilot end
+
 # pnpm
 export PNPM_HOME="/home/tomas/.local/share/pnpm"
 case ":$PATH:" in
