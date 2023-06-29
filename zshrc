@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="tomas"
+#ZSH_THEME="tomas"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,9 +54,12 @@ ZSH_CUSTOM=$HOME/git/mastoj/my-oh-my-custom
 plugins=(git brew docker tomas npm)
 
 
-source ~/.bash_profile
+#source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
-source ~/.env.sh 
+
+export PATH=$HOME/git/mastoj/az-assistant/src:$PATH
+
+#source ~/.env.sh 
 
 # User configuration
 
@@ -87,31 +90,35 @@ source ~/.env.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $HOME/git/mastoj/osxconfig/env.sh
+#source $HOME/git/mastoj/osxconfig/env.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/tomasjansson/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/tomasjansson/google-cloud-sdk/path.zsh.inc'
-fi
+# # The next line updates PATH for the Google Cloud SDK.
+# if [ -f /Users/tomasjansson/google-cloud-sdk/path.zsh.inc ]; then
+#   source '/Users/tomasjansson/google-cloud-sdk/path.zsh.inc'
+# fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/tomasjansson/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/tomasjansson/google-cloud-sdk/completion.zsh.inc'
-fi
+# # The next line enables shell command completion for gcloud.
+# if [ -f /Users/tomasjansson/google-cloud-sdk/completion.zsh.inc ]; then
+#   source '/Users/tomasjansson/google-cloud-sdk/completion.zsh.inc'
+# fi
 
-export MONO_TLS_PROVIDER=btls
+# export MONO_TLS_PROVIDER=btls
 
 source <(kubectl completion zsh)
 eval $(/usr/libexec/path_helper -s)
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# export PATH="$PATH:$HOME/.rvm/bin"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-source /Users/tomasjansson/.iterm2_shell_integration.zsh
+# source /Users/tomasjansson/.iterm2_shell_integration.zsh
 
-iterm2_print_user_vars() {
-  iterm2_set_user_var gcp_env $(uc-current-env)
-  iterm2_set_user_var kube_cluster $(uc-current-cluster)
-}
+# iterm2_print_user_vars() {
+#   iterm2_set_user_var gcp_env $(uc-current-env)
+#   iterm2_set_user_var kube_cluster $(uc-current-cluster)
+# }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
